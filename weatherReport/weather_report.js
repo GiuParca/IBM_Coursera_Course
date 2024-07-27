@@ -9,9 +9,9 @@ function showweatherDetails(event) {
         .then(response => response.json())
         .then(data => {
           const weatherInfo = document.getElementById('weatherInfo');
-          weatherInfo.innerHTML = `<h2>Weather in ${data.name}</h2>
-                                  <p>Temperature: ${data.main.temp} &#8451;</p>
-                                  <p>Weather: ${data.weather[0].description}</p>`;
+          weatherInfo.innerHTML = `<h2>Latitude and Longitude in ${data.name}</h2>
+                                  <p>Lattitude: ${data.coord.lat} &#8451;</p>
+                                  <p>Longitude: ${data.coord.lon} &#8451;</p>`;
 
         })
         .catch(error => {
